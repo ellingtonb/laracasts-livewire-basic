@@ -12,4 +12,5 @@ After this repository's clone and updated your `.env` file, run the following co
 * `composer install`
 * `npm install`
 * `php artisan migrate`
+* `npm run watch`, `npm run dev` or `npm run prod` 
 * `php artisan serve`
