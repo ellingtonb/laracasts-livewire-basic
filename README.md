@@ -12,3 +12,4 @@ After this repository's clone and updated your `.env` file, run the following co
 * `composer install`
 * `npm install`
 * `php artisan migrate`
+* `php artisan serve`
