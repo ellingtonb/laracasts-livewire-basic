@@ -25,7 +25,20 @@
         </style>
     </head>
     <body>
-        <livewire:counter />
+        <div class="container mx-auto p-5">
+            <div class="grid grid-rows-1">
+                <div class="p-10 m-5 bg-green-500 bg-opacity-25">
+                    <h2 class="text-lg font-semibold">Counter Component</h2>
+
+                    <livewire:counter />
+                </div>
+                <div class="p-10 m-5 bg-gray-500 bg-opacity-25">
+                    <h2 class="text-lg font-semibold">Standard Contact Form</h2>
+
+                    <livewire:contact-form />
+                </div>
+            </div>
+        </div>
 
         @livewireScripts
     </body>
