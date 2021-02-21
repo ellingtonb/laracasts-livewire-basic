@@ -38,7 +38,7 @@
                     <livewire:contact-form />
                 </div>
                 <div class="p-10 m-5 bg-red-500 bg-opacity-25">
-                    <h2 class="text-lg font-semibold">Counter Component</h2>
+                    <h2 class="text-lg font-semibold">Search Dropdown Component</h2>
 
                     <livewire:search-dropdown />
                 </div>
