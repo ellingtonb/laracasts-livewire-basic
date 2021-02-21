@@ -14,9 +14,9 @@ class ContactForm extends Component
     public $message;
 
     protected $rules = [
-        'name' => 'required|min:2',
+        'name' => 'required|min:3',
         'email' => 'required|email',
-        'phone' => 'required',
+        'phone' => 'min:14',
         'message' => 'required|min:5',
     ];
 
@@ -27,12 +27,7 @@ class ContactForm extends Component
 
     public function submitForm()
     {
-        /*$this->validate([
-            'name' => 'required|min:3',
-            'email' => 'required|email',
-            'phone' => 'required',
-            'message' => 'required|min:2',
-        ]);*/
+        $this->validate($this->rules);
 
         $contact['name'] = $this->name;
         $contact['email'] = $this->email;
