@@ -42,6 +42,12 @@
 
                     <livewire:search-dropdown />
                 </div>
+
+                <div class="p-10 m-5 bg-yellow-500 bg-opacity-25">
+                    <h2 class="text-lg font-semibold">Data Tables Component</h2>
+
+                    <livewire:data-tables />
+                </div>
             </div>
         </div>
 
