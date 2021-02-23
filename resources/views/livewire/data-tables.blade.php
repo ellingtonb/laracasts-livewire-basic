@@ -13,6 +13,7 @@
                             </svg>
                         </div>
                         <input id="search"
+                               wire:model="search"
                                class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:border-blue-300 focus:shadow-outline-blue sm:text-sm transition duration-150 ease-in-out"
                                placeholder="Search" type="search">
                     </div>
@@ -34,16 +35,43 @@
                     <thead>
                     <tr>
                         <th
-                            class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                            Name
+                            class="px-6 py-3 text-left bg-gray-50">
+                            <div class="flex items-center">
+                                <button wire:click="sortBy('name')" class="bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                    Name
+                                </button>
+                                <x-sort-icon
+                                    field="name"
+                                    :sortField="$sortField"
+                                    :sortAsc="$sortAsc"
+                                />
+                            </div>
                         </th>
                         <th
-                            class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                            Email
+                            class="px-6 py-3 text-left bg-gray-50">
+                            <div class="flex items-center">
+                                <button wire:click="sortBy('email')" class="bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                    Email
+                                </button>
+                                <x-sort-icon
+                                    field="email"
+                                    :sortField="$sortField"
+                                    :sortAsc="$sortAsc"
+                                />
+                            </div>
                         </th>
                         <th
-                            class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                            Status
+                            class="px-6 py-3 text-left bg-gray-50">
+                            <div class="flex items-center">
+                                <button wire:click="sortBy('status')" class="bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                    Status
+                                </button>
+                                <x-sort-icon
+                                    field="status"
+                                    :sortField="$sortField"
+                                    :sortAsc="$sortAsc"
+                                />
+                            </div>
                         </th>
                         <th class="px-6 py-3 bg-gray-50"></th>
                     </tr>
@@ -73,9 +101,6 @@
                                         class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                                     Active
                                 </span>
-                                    {{-- <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium leading-4 bg-red-100 text-red-800">
-                                                Inactive
-                                            </span> --}}
                                 @else
                                     <span
                                         class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium leading-4 bg-red-100 text-red-800">
