@@ -14,11 +14,11 @@ class SortIcon extends Component
     /**
      * Create a new component instance.
      *
-     * @param string $field
-     * @param string $sortField
-     * @param bool $sortAsc
+     * @param string|null $field
+     * @param string|null $sortField
+     * @param bool|null $sortAsc
      */
-    public function __construct(string $field, string $sortField, bool $sortAsc)
+    public function __construct(?string $field, ?string $sortField, ?bool $sortAsc)
     {
         $this->field = $field;
         $this->sortField = $sortField;
