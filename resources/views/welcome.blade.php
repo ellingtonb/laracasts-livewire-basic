@@ -32,11 +32,13 @@
 
                     <livewire:counter />
                 </div>
+
                 <div class="p-10 m-5 bg-gray-500 bg-opacity-25">
                     <h2 class="text-lg font-semibold">Standard Contact Form</h2>
 
                     <livewire:contact-form />
                 </div>
+
                 <div class="p-10 m-5 bg-red-500 bg-opacity-25">
                     <h2 class="text-lg font-semibold">Search Dropdown Component</h2>
 
@@ -47,6 +49,15 @@
                     <h2 class="text-lg font-semibold">Data Tables Component</h2>
 
                     <livewire:data-tables />
+                </div>
+
+                <div class="p-10 m-5 bg-yellow-500 bg-opacity-25">
+                    <h2 class="text-lg font-semibold">Blog Posts with Comments</h2>
+                    <ul class="list-disc mt-4">
+                        @foreach ($posts as $post)
+                            <li><a href="{{ route('post.show', $post) }}" class="text-blue-600">{{ $post->title }}</a></li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>
