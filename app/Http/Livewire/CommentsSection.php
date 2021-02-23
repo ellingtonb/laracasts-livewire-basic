@@ -13,13 +13,14 @@ class CommentsSection extends Component
     public ?string $successMessage = null;
 
     protected array $rules = [
+        'post' => 'required',
         'comment' => 'required|min:4'
     ];
 
-    /*public function mount(Post $post)
+    public function mount(Post $post)
     {
         $this->post = $post;
-    }*/
+    }
 
     public function postComment()
     {
