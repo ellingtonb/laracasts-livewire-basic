@@ -59,6 +59,12 @@
                         @endforeach
                     </ul>
                 </div>
+
+                <div class="p-10 m-5 bg-purple-500 bg-opacity-25">
+                    <h2 class="text-lg font-semibold pb-3">Polling Example</h2>
+
+                    <livewire:poll-example />
+                </div>
             </div>
         </div>
 
