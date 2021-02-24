@@ -55,7 +55,11 @@
                     <h2 class="text-lg font-semibold">Blog Posts with Comments</h2>
                     <ul class="list-disc mt-4">
                         @foreach ($posts as $post)
-                            <li><a href="{{ route('post.show', $post) }}" class="text-blue-600">{{ $post->title }}</a></li>
+                            <li>
+                                <span><a href="{{ route('post.show', $post) }}" class="text-blue-600">{{ $post->title }}</a></span>
+                                <span> - </span>
+                                <span><a href="{{ route('post.edit', $post) }}" class="text-blue-600">Edit</a></span>
+                            </li>
                         @endforeach
                     </ul>
                 </div>
@@ -67,6 +71,8 @@
                 </div>
             </div>
         </div>
+
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer></script>
 
         @livewireScripts
     </body>

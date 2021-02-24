@@ -42,6 +42,30 @@ Route::post('/post/{post}/comment', function (Request $request, Post $post) {
     return back()->with('success_message', 'Comment was posted!');
 })->name('comment.store');
 
+Route::get('/post/{post}/edit', function (Post $post) {
+    return view('post.edit', [
+        'post' => $post,
+    ]);
+})->name('post.edit');
+
+Route::patch('/post/{post}', function (Request $request, Post $post) {
+    $request->validate([
+        'title' => 'required',
+        'content' => 'required',
+        'photo' => 'nullable|sometimes|image|max:5000',
+    ]);
+
+    $post->update([
+        'title' => $request->input('title'),
+        'content' => $request->input('content'),
+        'photo' => $request->input('photo')
+            ? $request->file('photo')->store('photos', 'public')
+            : $post->photo,
+    ]);
+
+    return back()->with('success_message', 'Post was updated successfully!');
+})->name('post.update');
+
 /*Route::post('/contact', function (Request $request) {
     $contact = $request->validate([
         'name' => 'required',
