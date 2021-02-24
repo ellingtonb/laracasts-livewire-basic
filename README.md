@@ -14,3 +14,5 @@ After this repository's clone and updated your `.env` file, run the following co
 * `php artisan migrate`
 * `npm run watch`, `npm run dev` or `npm run prod` 
 * `php artisan serve`
+
+If you want to update your IDE Helpers, run the command: `composer dump-autoload`
