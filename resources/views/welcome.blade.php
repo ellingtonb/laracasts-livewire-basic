@@ -166,7 +166,7 @@
                 <div class="p-10 m-5 bg-purple-500 bg-opacity-25">
                     <h2 class="text-lg font-semibold pb-3">Polling Example</h2>
 
-                    {{--<livewire:poll-example />--}}
+                    <livewire:poll-example />
                 </div>
 
                 <div class="p-10 m-5 bg-blue-300 bg-opacity-25">
