@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Comment;
 use App\Models\Order;
 use App\Models\Post;
+use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -35,5 +36,7 @@ class DatabaseSeeder extends Seeder
         Comment::create(['post_id' => 4, 'username' => 'Diane S', 'content' => 'Another comment for the post with an id of 4']);
 
         Order::factory(10)->create();
+
+        Tag::factory(5)->create();
     }
 }
