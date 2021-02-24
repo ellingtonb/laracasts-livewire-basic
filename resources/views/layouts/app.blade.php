@@ -22,6 +22,20 @@
         body {
             font-family: 'Nunito';
         }
+
+        progress {
+            border-radius: 7px;
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: lightgray;
+            border-radius: 7px;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: blue;
+            border-radius: 7px;
+        }
     </style>
 </head>
 
@@ -29,6 +43,8 @@
 <main class="container mx-auto">
     @yield('content')
 </main>
+
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer></script>
 
 @livewireScripts
 </body>
